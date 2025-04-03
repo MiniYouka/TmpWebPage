@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: url('https://w.wallhaven.cc/full/5d/wallhaven-5d25y8.jpg') no-repeat center center fixed;
+            background-size: cover;
+            transition: background 0.5s ease-in-out;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+        }
+        .message {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 20px;
+        }
+        .movie {
+            width: 250px;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-decoration: none;
+            position: relative;
+        }
+        .movie:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .movie-name {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.2em;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+      .container:hover .movie {
+            opacity: 0.3;
+        }
+        .container .movie:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Películas</h1>
+    <div class="message" id="message">Selecciona una película para ver el comentario.</div>
+    <div class="container">
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://www.avforums.com/styles/avf/editorial/block//b9b4070d1f131d4076cf443763356dbe_3x3.jpg');" 
+           onmouseover="changeBackground('https://www.avforums.com/styles/avf/editorial/block//b9b4070d1f131d4076cf443763356dbe_3x3.jpg', 'Clásico del cine de ciencia ficción')">
+            <div class="movie-name">The Thing 1982</div>
+        </a>
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://monterreyrock.com/wp-content/uploads/2012/02/thething.jpg');" 
+           onmouseover="changeBackground('https://i.redd.it/cm96mpib0fje1.jpeg', 'No tiene tan buenas críticas pero si te gustó la primera sí o sí debes verla sobre todo para entender la primera')">
+            <div class="movie-name">The Thing 2011</div>
+        </a>
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://m.media-amazon.com/images/S/pv-target-images/951f61b1ca068956d61065fc3ad2a801578cc8bcc5fc70490f8e017363e178bd.jpg');" 
+           onmouseover="changeBackground('https://wallpapercave.com/wp/wp7457350.jpg', 'Cine, simplemente la película madre de la ciencia ficción')">
+            <div class="movie-name">Alien 1979</div>
+        </a>
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://www.mubis.es/media/users/3724/331264/alien-romulus-poster-original.jpg');" 
+           onmouseover="changeBackground('https://images.alphacoders.com/137/1371074.jpeg', 'Me gusta a pesar de no tener tan buenas críticas, es algo fresco en comparación con la última horrenda película de Covenant')">
+            <div class="movie-name">Alien Romulus</div>
+        </a>
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://m.media-amazon.com/images/I/71MLsweKQeL._AC_UF894,1000_QL80_.jpg');" 
+           onmouseover="changeBackground('https://hips.hearstapps.com/hmg-prod/images/professional-bodybuilder-arnold-schwarzenegger-posing-at-news-photo-481640767-1551868687.jpg', 'Una de las mejores películas de acción de todos los tiempos')">
+            <div class="movie-name">Predator 1987</div>
+        </a>
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://m.media-amazon.com/images/I/713OicMAiaS._AC_UF894,1000_QL80_.jpg');" 
+           onmouseover="changeBackground('https://preview.redd.it/blade-runner-2049-4k-wallpapers-part-2-v0-z1nw8vqyo7xa1.jpg?width=1080&crop=smart&auto=webp&s=b2c993a4352e421abd5e8f72164de5d152d765d0', 'Una secuela impresionante que amplía el universo de Blade Runner')">
+            <div class="movie-name">Blade Runner 2049</div>
+        </a>
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://wallpapercave.com/wp/wp3731018.jpg');" 
+           onmouseover="changeBackground('https://wallpapercave.com/wp/wp3731018.jpg', 'Una película divertida para los fans de Dragon Ball')">
+            <div class="movie-name">Dragon Ball Super Broly</div>
+        </a>
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://m.media-amazon.com/images/M/MV5BNGE1YzI4NzMtZTUxNi00Y2I5LTg2MmQtODE0NThmYTFmMDk0XkEyXkFqcGc@._V1_.jpg');" 
+           onmouseover="changeBackground('https://wallpapercat.com/w/full/6/9/b/33892-3840x2160-desktop-4k-matrix-movie-background-image.jpg', 'La primera de Matrix es un clásico, las demás no tanto')">
+            <div class="movie-name">Matrix</div>
+        </a>
+        <a href="https://enlace-generico.com" class="movie" style="background-image: url('https://www.mubis.es/media/movies/650/259414/amanecer-de-los-muertos-original.jpg');" 
+           onmouseover="changeBackground('https://www.phenomena-experience.com/galeria/Phantasma%202023/amanecer-de-los-muertos.jpg', 'La película de zombies más icónica del cine moderno')">
+            <div class="movie-name">El Amanecer de los Muertos 2004</div>
+        </a>
+    </div>
+
+    <script>
+        function changeBackground(imageUrl, message) {
+            document.body.style.backgroundImage = `url('${imageUrl}')`;
+            document.getElementById("message").textContent = message;
+        }
+    </script>
+</body>
+</html>

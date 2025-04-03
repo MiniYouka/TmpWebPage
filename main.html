@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones del Youka</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://wallpapercave.com/wp/wp1853122.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 20px;
+        }
+        .box {
+            width: 280px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            animation: slideIn 1s ease-in-out;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-decoration: none;
+        }
+        .box:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        .music { background-image: url('https://daily.jstor.org/wp-content/uploads/2023/01/good_times_with_bad_music_1050x700.jpg'); }
+        .movies { background-image: url('https://miro.medium.com/v2/resize:fit:2000/1*jX2hHwYV7P_NVPKcVkcIVA.jpeg'); }
+        .books { background-image: url('https://i.blogs.es/aa76de/libro/1366_2000.jpg'); }
+        .links { background-image: url('https://i.redd.it/bp63fbh3pi4c1.jpg'); }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Recomendaciones</h1>
+    <div class="container">
+        <a href="#musica" class="box music">🎵 Música</a>
+        <a href="#peliculas" class="box movies">🎬 Películas y Series</a>
+        <a href="#libros" class="box books">📚 Libros</a>
+        <a href="#enlaces" class="box links">🌐 Enlaces Útiles</a>
+    </div>
+</body>
+</html>
