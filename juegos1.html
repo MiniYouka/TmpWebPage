@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuegos</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: url('https://w.wallhaven.cc/full/39/wallhaven-39ev5d.jpg') no-repeat center center fixed;
+            background-size: cover;
+            transition: background 0.5s ease-in-out;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 20px;
+        }
+        .album {
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-decoration: none;
+            position: relative;
+        }
+        .album:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        .album-name {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.1em;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo para el globo de texto */
+        .tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, visibility 0s ease 0.3s;
+            font-size: 1.1em;
+            width: 150px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+        .album:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out, visibility 0s ease 0s;
+        }
+
+        /* Estilo de la nota en la parte baja */
+        .note {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+        .note.active {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        function changeBackground(imageUrl) {
+            document.body.style.backgroundImage = "url('" + imageUrl + "')";
+        }
+
+        function resetBackground() {
+            document.body.style.backgroundImage = "url('https://w.wallhaven.cc/full/39/wallhaven-39ev5d.jpg')";
+        }
+
+        function updateNote(albumName) {
+            var note = document.getElementById('album-note');
+            note.innerHTML = albumName;
+            note.classList.add('active');
+        }
+
+        function resetNote() {
+            var note = document.getElementById('album-note');
+            note.classList.remove('active');
+        }
+    </script>
+</head>
+<body>
+    <h1>Videojuegos</h1>
+    <div class="container">
+        <a href="https://enlace-generico.com" class="album" style="background-image: url('https://store-images.s-microsoft.com/image/apps.14266.13660021874166335.cf99aaa0-1039-41d3-bafe-7239ec9e261c.99536512-d642-4538-a4d0-21872ec5d097');" 
+           onmouseover="changeBackground('https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000060324/da60fce87c0f406ce617b9f0e39af7858eea0a05f592f749b141b8b38799d6f0'); updateNote('Es un rpg japones, no voy a mentir no lo he acabado pero es un gran juego para pasar el rato, se supone que el juego es una reflexión sobre la vida pero no lo he jugado tanto para confirmarlo')" onmouseout="; resetNote()">
+            <div class="tooltip">Persona3   </div>
+        </a>
+        <a href="https://enlace-generico.com" class="album" style="background-image: url('https://m.media-amazon.com/images/M/MV5BNGEwNzFiNTUtNjYyYy00OTM2LTljOTYtYTUzN2Y4N2I3ZWJhXkEyXkFqcGc@._V1_.jpg');" 
+           onmouseover="changeBackground('https://image.api.playstation.com/vulcan/img/rnd/202010/2122/vQqEXW0BefsUqAyJTelwjmuA.png'); updateNote('Juegazo, un juego de plataformas estilo mario bros por así decirlo en el cual recorres varios mundos pero también eres capaz de crear los tuyos propios, tal vez deberías jugar uno más reciente ya que el online de este cerró pero lo recomiendo por ser el que yo he jugado')" onmouseout="; resetNote()">
+            <div class="tooltip">Little Big Planet</div>
+        </a>
+        <a href="https://enlace-generico.com" class="album" style="background-image: url('https://media.contentapi.ea.com/content/dam/gin/images/2017/01/mirrors-edge-key.jpg.adapt.crop1x1.767p.jpg');" 
+           onmouseover="changeBackground('https://cdn1.epicgames.com/spt-assets/e684626eb90547808cce6b8026f839c1/mirrors-edge-catalyst-1tbj5.jpg    '); updateNote('Otro juego de plataformas, es un juego de parkour, si ritmo es frenetico y por eso me encanta, muy recomendado para pasar el rato')" onmouseout="; resetNote()">
+            <div class="tooltip">Mirrors Edge</div>
+        </a>
+        <a href="https://enlace-generico.com" class="album" style="background-image: url('https://i.ytimg.com/vi/94g3yvGcy7s/sddefault.jpg');" 
+           onmouseover="changeBackground('https://sm.ign.com/t/ign_latam/photo/default/efootball-key-visual-cr-1626850106191_c5sy.1280.jpg'); updateNote('El fucking PES 2006 pero actualizado al 2025 con rostors, estadios y mejoras en los estadios, simplemente el mejor juego de fútbol de la historia ')" onmouseout="    ; resetNote()">
+            <div class="tooltip">Pes 2025 Xitopatch</div>
+        </a>
+
+        <a href="https://enlace-generico.com" class="album" style="background-image: url('https://image.api.playstation.com/cdn/UP0177/CUSA00363_00/q27BoJza6yJmXUqvzN0WndHK8ag3mzeq.png');" 
+           onmouseover="changeBackground('https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000020818/12e8099c149a839a3a1e9255e65a9857629017fc6cd36e74cfc4a2f4f4c2e5c8'); updateNote('Poco que decir, el mejor juego de la historia, juegalo si o si')" onmouseout="    ; resetNote()">
+            <div class="tooltip">Alien Isolation</div>
+        </a>
+
+        <a href="https://enlace-generico.com" class="album" style="background-image: url('https://cdn1.epicgames.com/spt-assets/957cb85fed3d43719a2de103cbb577f0/unravel-6ic2h.jpg');" 
+           onmouseover="changeBackground('https://image.api.playstation.com/vulcan/img/rnd/202010/1520/Zn6JKFaqhuWXqqehxCqkXarQ.jpg'); updateNote('Otro juego de plataformas \(Sí, me enantan esta clase de juegos\), mucho más relajante que los anteriores, impica mucho resolver acertijos y su aspecto visual es hermoso, si lo queires jugar solo dime, te lo presto por steam')" onmouseout="    ; resetNote()">
+            <div class="tooltip">Unravel</div>
+        </a>
+
+        <a href="https://enlace-generico.com" class="album" style="background-image: url('https://static.wikia.nocookie.net/terraria/images/f/fa/Terrarialogo.jpg/revision/latest?cb=20180414173844&path-prefix=es');" 
+           onmouseover="changeBackground('https://assets.nintendo.com/image/upload/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000001702/dac3a26570b5ca1ddf703bf0add7cc7c527f71a2b56521baf69e20c7a573c610'); updateNote('Minecraft pero en 2d')" onmouseout="    ; resetNote()">
+            <div class="tooltip">Terraria</div>
+        </a>
+    </div>
+
+    <div id="album-note" class="note">  </div>
+</body>
+</html>
